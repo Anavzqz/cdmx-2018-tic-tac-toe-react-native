@@ -97,8 +97,8 @@ export default class App extends React.Component {
   renderIcon = (row, col) => {
     let value = this.state.gameState[row][col];
     switch(value) {
-      case 1: return <Icon name="close" style={styles.tileX}/>;
-      case -1: return <Icon name="circle-outline" style={styles.tileX}/>;
+      case 1: return <Icon name="cat" style={styles.tileX}/>;
+      case -1: return <Icon name="paw" style={styles.tileO}/>;
       default: return <View />;
     }
   }
@@ -107,7 +107,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
 
-        <Text style={{paddingBottom:30, color:'#00A4D2', fontSize:45}}>Tic-Cat-Toe</Text>
+        <Text style={{paddingBottom:30, color:'blue', fontSize:45}}>Tic-Tac-Toe</Text>
 
         <View style={{flexDirection: "row"}}>
           <TouchableOpacity onPress={() => this.onTilePress(0, 0)} style={[styles.tile, {borderLeftWidth: 0, borderTopWidth: 0 }]}>
@@ -154,25 +154,25 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    color: 'gray',
-    backgroundColor: 'white',
+    color: 'blue',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
   tile: {
     borderWidth: 5,
-    borderColor: 'gray',
+    borderColor: 'blue',
     width: 100,
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
   },
   tileX: {
-    color: '#00A4D2',
+    color: 'yellow',
     fontSize: 60,
   },
   tileO: {
-    color: '#00A4D2',
+    color: 'red',
     fontSize: 50,
   },
 });

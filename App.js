@@ -107,7 +107,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
 
-        <Text style={{paddingBottom:30, color:'#4ECDC4', fontSize:45}}>Tic-Tac-Toe</Text>
+        <Text style={{paddingBottom:30, color:'#4ECDC4', fontSize:45}}>Catdog</Text>
 
         <View style={{flexDirection: "row"}}>
           <TouchableOpacity onPress={() => this.onTilePress(0, 0)} style={[styles.tile, {borderLeftWidth: 0, borderTopWidth: 0 }]}>
@@ -144,7 +144,7 @@ export default class App extends React.Component {
         </View>
 
         <View style={{paddingTop:50}}/>
-        <Button title='New Game' onPress={this.onNewGamePress} />
+        <Button title='Nuevo juego' onPress={this.onNewGamePress} />
 
       </View>
     );

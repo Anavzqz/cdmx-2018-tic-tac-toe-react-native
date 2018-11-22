@@ -98,7 +98,7 @@ export default class App extends React.Component {
     let value = this.state.gameState[row][col];
     switch(value) {
       case 1: return <Icon name="cat" style={styles.tileX}/>;
-      case -1: return <Icon name="paw" style={styles.tileO}/>;
+      case -1: return <Icon name="dog" style={styles.tileO}/>;
       default: return <View />;
     }
   }
@@ -107,7 +107,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
 
-        <Text style={{paddingBottom:30, color:'blue', fontSize:45}}>Tic-Tac-Toe</Text>
+        <Text style={{paddingBottom:30, color:'#4ECDC4', fontSize:45}}>Tic-Tac-Toe</Text>
 
         <View style={{flexDirection: "row"}}>
           <TouchableOpacity onPress={() => this.onTilePress(0, 0)} style={[styles.tile, {borderLeftWidth: 0, borderTopWidth: 0 }]}>
@@ -155,24 +155,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     color: 'blue',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
   tile: {
     borderWidth: 5,
-    borderColor: 'blue',
+    borderColor: '#556370',
     width: 100,
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
   },
   tileX: {
-    color: 'yellow',
+    color: '#FF6B6B',
     fontSize: 60,
   },
   tileO: {
-    color: 'red',
+    color: '#E0B396',
     fontSize: 50,
   },
 });
